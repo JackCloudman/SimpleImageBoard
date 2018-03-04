@@ -2,9 +2,9 @@
  {% block content %}
 <header class="masthead mb-auto">                                                                                                                                           
   <div class="inner">                                                                                                                                                       
-    <h3 class="masthead-brand">0/0 Board</h3>
+    <h3 class="masthead-brand"><a href="/">0/0 Board</a></h3>
     <nav class="nav nav-masthead justify-content-rigth">                                                                                                                   
-      <a class="nav-link" href="/">Inicio</a>                                                                                                                   
+      <a class="nav-link" href="/login/">Iniciar sesion</a>                                                                                                                   
       <a class="nav-link" href="#">Blog</a>                                                                                                                                 
       <a class="nav-link" href="#">Contacto</a>                                                                                                                             
     </nav>
@@ -12,7 +12,7 @@
 </header>
 <form method="post">
     {% csrf_token %}
-    <div class="row">
+    <div class="row justify-content-center">
         <div class="col-md-8 col-md-offset-2">
             <div class="form-group">
                 <label >Nombre de usuario</label>
@@ -20,7 +20,7 @@
             </div>
         </div>
     </div>
-    <div class="row">
+    <div class="row justify-content-center">
         <div class="col-md-8 col-md-offset-2">
             <div class="form-group">
                 <label >Correo</label>
@@ -28,7 +28,7 @@
             </div>
         </div>
     </div>
-    <div class="row">
+    <div class="row justify-content-center">
         <div class="col-md-8 col-md-offset-2">
             <div class="form-group">
                 <label >Contraseña</label>
@@ -36,7 +36,7 @@
             </div>
         </div>
     </div>
-    <div class="row">
+    <div class="row justify-content-center">
         <div class="col-md-8 col-md-offset-2">
             <div class="form-group">
                 <label >Confirmar contraseña</label>
@@ -45,7 +45,7 @@
         </div>
     </div>
     
-    <div class="row">
+    <div class="row justify-content-center">
         <div class="col-md-8 col-md-offset-2">
             <div class="form-group">
                 <button class="btn btn-primary "type="submit">Guardar</button>

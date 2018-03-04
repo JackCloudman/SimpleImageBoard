@@ -4,17 +4,21 @@
   <div class="inner">
     <h3 class="masthead-brand">0/0 Board</h3>
     <nav class="nav nav-masthead justify-content-center">
-      <a class="nav-link" href="registrar/">Registrar</a>
+    {% if user.is_authenticated %}
+    <a class="nav-link" href="logout/">{{ user.username }} Logout</a>
+    {% else %}
+    <a class="nav-link" href="registrar/">Registrar</a>
+     {% endif%} 
       <a class="nav-link" href="#">Blog</a>
       <a class="nav-link" href="#">Contacto</a>
     </nav>
   </div>
 </header>
 <main role="main" class="inner cover">
-  <h1 class="cover-heading">Camputa, sube y comparte todas tus fotos!</h1>
+  <h1 class="cover-heading">Captura, sube y comparte todas tus fotos!</h1>
    <p class="lead">0/0 Board es una pagina en la cual podras subir tus imagenes y discutir sobre ellas, puedes compartir tantas imagenes que quieras! Hay varios hilos en los que podras interactuar con distintas personas!</p>
   <p class="lead">
-    <a href="#" class="btn btn-lg btn-secondary">Iniciar sesion</a>
+    <a href="/login/" class="btn btn-lg btn-secondary">Iniciar sesion</a>
    </p>
  </main>
 {% endblock %}
