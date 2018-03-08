@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'apps.board',
     'apps.usuarios',
-    'apps.amigos',
+    'apps.followers',
 ]
 
 MIDDLEWARE = [
