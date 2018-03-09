@@ -4,9 +4,9 @@
   <div class="inner">
     <h3 class="masthead-brand"><a href="/">0/0 Board</a></h3>
     <nav class="nav nav-masthead justify-content-center">
-      <a class="nav-link" href="logout/">{{ user.username }} Logout</a>
-      <a class="nav-link" href="#">Blog</a>
-      <a class="nav-link" href="#">Contacto</a>
+      <a class="nav-link" href="/logout/">{{ user.username }} Logout</a>
+      <a class="nav-link" href="blog.jackcloudman.me">Blog</a>
+      <a class="nav-link" href="https://t.me/JackCloudman">Contacto</a>
     </nav>
   </div>
 </header>
@@ -16,9 +16,17 @@
       </a>
     </div>
 <ul>
+
+  <li>Nombre: {{ user.first_name }}</li>
+  <li>Apellidos: {{ user.last_name }}</li>
   <li>Username: {{ user.username }}</li>
+  <li>Biografia: {{ user.profile.bio }}</li>
   <li>Localizacion: {{ user.profile.location }}</li>
   <li>Cumpleaños: {{ user.profile.birth_date }}</li>
 
 </ul>
+<main role="main" class="inner cover">                                                                                                  
+    <p class="lead">                                                                                                                    
+       <a href="edit/" class="btn btn-lg btn-secondary">Editar Perfil</a></p>                                                              
+ </main> 
 {% endblock %}

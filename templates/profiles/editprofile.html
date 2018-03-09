@@ -1,0 +1,52 @@
+{% extends 'usuarios/base.html'%}                                                                                                          
+{% block content %}  
+<form method="POST" enctype="multipart/form-data">
+  {% csrf_token %}
+    {%for field in user_form %}
+      <div class="row justify-content-center">
+        <div class="col-md-8 col-md-offset-2">
+            <div class="form-group">
+            {{field.label_tag}}
+            <input class="form-control" type="text" id="{{field.id_for_label}} " name="{{field.html_name}}" value="{{field.value}} ">
+            </div>
+        </div>
+    </div>
+    {%endfor%}
+    <div class="row justify-content-center">                                                                                          
+        <div class="col-md-8 col-md-offset-2">                                                                                          
+            <div class="form-group">
+            <label for="id_location">Biografia:</label>
+            <input class="form-control" type="text" id="id_bio" name="bio" value="{{profile_form.bio.value}} ">
+            </div>
+        </div>
+    </div>
+    <div class="row justify-content-center">                                                                                          
+        <div class="col-md-8 col-md-offset-2">                                                                                          
+            <div class="form-group">
+            <label for="id_location">Localizacion:</label>
+            <input class="form-control" type="text" id="id_location" name="location" value="{{profile_form.location.value}} ">
+            </div>
+        </div>
+    </div>
+    <div class="row justify-content-center">                                                                                          
+        <div class="col-md-8 col-md-offset-2">                                                                                          
+            <div class="form-group">
+            <label for="id_location">Cumpleaños:</label>
+            <input class="form-control" type="date" id="id_birth_date" name="birth_date" value="{{profile_form.birth_date.value}} ">
+            </div>
+        </div>
+    </div>
+
+    <div class="row justify-content-center">                                                                                          
+        <div class="col-md-8 col-md-offset-2">                                                                                          
+            <div class="form-group">
+            {{profile_form.userpic.label}}
+            <input class="form-control" type="file" id="id_userpic" name="userpic">
+            </div>
+        </div>
+    </div>
+<div class="form-group">
+                <button class="btn btn-primary "type="submit">Guardar</button>
+            </div>
+</form>
+{% endblock %}
