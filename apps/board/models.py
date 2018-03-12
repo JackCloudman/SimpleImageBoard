@@ -12,7 +12,7 @@ class Post(models.Model):
     created_date = models.DateTimeField(default=timezone.now)
     title = models.CharField(max_length=50)
     text = models.TextField()
-    image = models.ImageField(upload_to='static')
+    image = models.ImageField(upload_to='img')
     def __str__(self):
         return self.title
 class Comment(models.Model):
