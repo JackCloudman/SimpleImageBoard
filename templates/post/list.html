@@ -1,12 +1,18 @@
 {% extends 'post/base.html' %}
 {% block content %}
+      <div class="jumbotron">
+         <h3 class="media-heading"><i class="material-icons">collections</i> {{board.description}}</h3>
+          <p class="lead">
+    <a class="btn btn-primary btn-lg" href="new/" role="button">Añadir Post!</a>
+  </p>
+      </div>
     {% for post in posts %}
         <div class="post">
             <div class="date">
             Publicado por {{post.author}}, {{ post.created_date }}
             </div>
             <h1><a href="">{{ post.title }}</a></h1>
-            <div class="figure"><img class="rounded" src="/{{post.image}}" style="width:250px;margin-bottom:5px;">
+            <div class="figure"><a href="/{{post.image}}"><img class="rounded" src="/{{post.image}}" style="width:250px;margin-bottom:5px;"></a>
              <div>
                 <p>{{post.text|linebreaksbr}}</p></div>
             </div>

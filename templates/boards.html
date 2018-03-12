@@ -1,0 +1,12 @@
+{% extends 'post/base.html' %}                                                                                                                                          
+{% block content %}
+      <div class="jumbotron">                                                                                                                                               
+         <h3 class="media-heading">A continuacion se muestran la lista de boards disponibles en la pagina:</h3>                                                                 </div>  
+<div class="post">
+    <ul>
+    {%for board in boards%}
+    <li><a href="/{{board.name}}/"><p>{{board.name}}: {{board.description}}</p><a></li>
+    {% endfor %}
+    </ul>
+</div>
+{%endblock%}

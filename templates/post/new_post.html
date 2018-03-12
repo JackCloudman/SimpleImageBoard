@@ -1,0 +1,39 @@
+{% extends 'post/base.html' %}
+{% block content %}
+      <div class="jumbotron">
+         <h3 class="media-heading">Añade un post a /{{board.name}}/</h3>
+          <p class="lead">
+    <a class="btn btn-primary btn-lg" href="/{{board.name}}/" role="button">Volver al Board!</a>
+  </p></div>
+<div class="post">
+  <form method="POST" enctype="multipart/form-data">
+  {% csrf_token %}
+    <div class="row justify-content-center">                                                                                          
+        <div class="col-md-8 col-md-offset-2">                                                                                          
+            <div class="form-group">
+            <label for="id_title">Titulo:</label>
+            <input class="form-control" type="text" id="id_title" name="title">
+            </div>
+        </div>
+    </div>
+    <div class="row justify-content-center">                                                                                          
+        <div class="col-md-8 col-md-offset-2">                                                                                          
+            <div class="form-group">
+            <label for="id_text">Texto:</label>
+            <textarea class="form-control" id="id_text" name="text"></textarea>
+            </div>
+        </div>
+    </div>
+    <div class="row justify-content-center">                                                                                          
+        <div class="col-md-8 col-md-offset-2">                                                                                          
+            <div class="form-group">
+            <input class="form-control" type="file" id="id_image" name="image">
+            </div>
+        </div>
+    </div>
+<div class="form-group">
+                <button class="btn btn-primary "type="submit">Guardar</button>
+            </div>
+</form>
+</div>
+{% endblock %}

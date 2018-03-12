@@ -10,21 +10,36 @@
     </nav>
   </div>
 </header>
-<div style="margin-bottom:20px">
-      <a href="/{{user.profile.userpic}}">
-        <img src="/{{user.profile.userpic}}" alt="Si lees esto, puedes intentar cambiando tu imagen de usuario!" style="width:50%" class="rounded mx-auto d-block">
-      </a>
+<div class="container">
+    <div id="myModal" tabindex="1"aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <center>
+                    <img src="http://10.0.0.6/img/2015-07-18-752369_skn0Lfs.png" name="aboutme" width="140" border="0" class="img-circle"></a>
+                    <h3 class="media-heading">Joe Sixpack</h3><h4> <span class="glyphicon glyphicon-map-marker"></span><small>USA</small></h4>
+                    <span><strong>Skills: </strong></span>
+                        <span class="label label-warning">HTML5/CSS</span>
+                        <span class="label label-info">Adobe CS 5.5</span>
+                        <span class="label label-info">Microsoft Office</span>
+                        <span class="label label-success">Windows XP, Vista, 7</span>
+                    </center>
+                    <hr>
+                    <center>
+                    <p class="text-left"><strong>Bio: </strong><br>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sem dui, tempor sit amet commodo a, vulputate vel tellus.</p>
+                    <br>
+                    </center>
+                </div>
+                <div class="modal-footer">
+                    <center>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">I've heard enough about Joe</button>
+                    </center>
+                </div>
+            </div>
+        </div>
     </div>
-<ul>
-
-  <li>Nombre: {{ user.first_name }}</li>
-  <li>Apellidos: {{ user.last_name }}</li>
-  <li>Username: {{ user.username }}</li>
-  <li>Biografia: {{ user.profile.bio }}</li>
-  <li>Localizacion: {{ user.profile.location }}</li>
-  <li>Cumpleaños: {{ user.profile.birth_date }}</li>
-
-</ul>
+</div>
 <main role="main" class="inner cover">                                                                                                  
     <p class="lead">                                                                                                                    
        <a href="edit/" class="btn btn-lg btn-secondary">Editar Perfil</a></p>                                                              

@@ -6,7 +6,7 @@ from . import views
 urlpatterns = [
     url(r'^register/$',RegistroUsuarios.as_view()),
     url(r'^login/$',login,{'template_name':'login.html'}),
-    url(r'^logout/$', logout, {'next_page':'/'}),
-    url(r'^profile/edit/$',views.update_profile,name='edit_profile'), 
+    url(r'^logout/$', login_required(logout), {'next_page':'/'}),
+    url(r'^profile/edit/$',login_required(views.update_profile),name='edit_profile'), 
     url(r'^profile/$',login_required(views.profile)), 
 ]
