@@ -9,6 +9,11 @@ def showboard(request,board):
     b = get_object_or_404(Board, name=board)
     posts = Post.objects.filter(board=b).order_by('-created_date')
     return render(request,'post/list.html',{'posts':posts,'board':b})
+def post_detail(request,board,pk):
+    b = get_object_or_404(Board, name=board)
+    post = get_object_or_404(Post,pk=pk)
+    return render(request,'post/detail.html',{'post':post,'board':b})
+
 def boardlist(request):
     boards = Board.objects.all()
     return render(request,'boards.html',{'boards':boards}) 

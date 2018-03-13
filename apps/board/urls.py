@@ -7,4 +7,5 @@ urlpatterns = [
     url(r'^list/$',views.boardlist),
     path('<board>/',views.showboard,name='showboard'),
     path('<board>/new/',login_required(views.new_post),name='new_post'),
+    path('<board>/<pk>/',views.post_detail,name='post_detail'),
 ]  
