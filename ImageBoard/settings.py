@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'rgwlqz7bqi3*ru*k&_szcet7w6=o&pg$c&bsh#9wat_9^t@&q9'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1','10.0.0.6']
+ALLOWED_HOSTS = ['127.0.0.1','192.168.0.7']
 
 
 # Application definition
@@ -123,3 +123,5 @@ STATIC_URL = '/static/'
 STATIC_ROOT = '/home/jack/SimpleImageBoard/static/'
 LOGIN_REDIRECT_URL = '/'
 LOGIN_URL='/login/'
+DEFAULT_FILE_STORAGE = 'storages.backends.ftp.FTPStorage'
+FTP_STORAGE_LOCATION = 'FTP://u620704378.storage:juanjose9799@ftp.jackcloudman.me:21' 
